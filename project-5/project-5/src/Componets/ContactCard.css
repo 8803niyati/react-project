@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'PT Sans Narrow';
+}
+
+
+ .contact-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+} 
+
+.contact-banner h1,
+.contact-banner p {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(37, 33, 33, 0.6); 
+  z-index: 0;
+}
+
+/* font */
+.get-in-touch-text {
+  color: orange;
+font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+/* button */
+.send-button {
+  background-color: #f7931e !important;
+  color: white !important;
+  border: 2px solid transparent !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  padding: 12px 24px !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease-in-out !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 50px !important; 
+}
+
+.send-button:hover {
+  background-color: #ffffff !important;      
+  color: #f7931e !important;                 
+  border: 2px solid #f7931e !important;       
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+  cursor: pointer !important;
+}
+
+
+.send-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.contact-heading{
+   font-size: 26px;
+    font-family: "Roboto", sans-serif;
+}
+/* left section */
+.icon-style {
+  font-size: 1.2rem;
+  color:#f7931e;
+}
+h1.text-uppercase {
+  font-size: 50px;
+  font-family: "Boldonse", system-ui;
+} 
+.left-shift {
+  margin-right: 200px;
+}
+.hover-orange {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-orange:hover {
+  color: orange;
+}
+
+/* animation */
+.slide-in-left {
+  animation: slideInLeft 1s ease-in;
+}
+
+.slide-in-right {
+  animation: slideInRight 1s ease-in;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

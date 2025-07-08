@@ -1,19 +1,8 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  font-family: 'PT Sans Narrow';
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
-.contact-heading {
-  font-weight: 1000;
-  font-size: 1.75rem;
-  color: #ffffff;
-  letter-spacing: 0.5px;
-  text-transform: lowercase;
-}
-
-
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -49,143 +38,25 @@
 .read-the-docs {
   color: #888;
 }
-/* section */
-.contact-banner {
-  background: url('./assets/banner.jpg') no-repeat center center;
-  height: 300wh;
-  width: 100wh;
-  background-size: cover;
-  min-height: 300px;
-  position: relative;
-  z-index: 1;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.contact-banner::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6); 
- 
- 
-}
-
-.contact-banner h1,
-.contact-banner p {
-  z-index: 2;
-
-}
- 
-
-
-/* section */
-.get-in-touch-text {
-  color: orange;
-font-family: 'Pacifico', cursive;
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.contact-heading {
-  font-size: 42px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #000;
-}
-.text-orange {
-  color: orange;
-  font-size: 22px;
-}
-h5.text-orange {
-  font-family: 'Dancing Script', cursive;
-  margin-bottom: 10px;
-}
-
-/* form */
-.text-orange {
-  color: orange;
-}
-
-.send-button {
-  width: 100%;
-  padding: 12px 24px;
-  font-weight: bold;
-  border-radius: 50px;
-  background-color: #f78f1e !important;   
-  color: white !important;
-  border: none;
-  transition: all 0.3s ease;
-}
-
-.send-button:hover {
-  background-color: #fff !important;
-  color: #f78f1e !important;
-  border: 2px solid #f78f1e !important;
-}
 
 
 
-h1.text-uppercase {
-  font-size: 50px;
-  font-family: "Boldonse", system-ui;
-}
-.contact-heading{
-   font-size: 26px;
-    font-family: "Roboto", sans-serif;
-}
 
-.icon-style {
-  font-size: 20px;
-  margin-right: 15px;
-  color:orange;
-}
-/* Animation for Left Column */
-@keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
-/* Animation for Right Column */
-@keyframes slideInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.slide-in-left {
-  animation: slideInLeft 1s ease-out;
-  opacity: 0;
-}
 
-.slide-in-right {
-  animation: slideInRight 1s ease-out;
-  opacity: 0;
-}
-.slide-in-left,
-.slide-in-right {
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-.slide-in-left,
-.slide-in-right {
-  animation-fill-mode: both;
-  opacity: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
