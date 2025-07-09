@@ -63,8 +63,9 @@ html, body, #root {
 }
 
 .header-icon:hover {
-  color: #ffffff;
+  color:#ffffff;
   transform: scale(1.2);
+  background-color: rgb(209, 132, 55); 
 }
 
 .index-header {
