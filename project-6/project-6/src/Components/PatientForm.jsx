@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from "react";
-import { Form, Button, Row, Col, Table } from "react-bootstrap";
+import { Form, Button, Row, Col, Card } from "react-bootstrap";
 import "../App.css";
 
 const defaultForm = {
@@ -11,10 +10,11 @@ const defaultForm = {
   contact: "",
 };
 
-const PatientForm = ({ patients, setPatients }) => {
+const PatientForm = () => {
   const [form, setForm] = useState(defaultForm);
   const [errors, setErrors] = useState({});
   const [editData, setEditData] = useState(null);
+  const [patients, setPatients] = useState([]);
 
   useEffect(() => {
     const storedData = JSON.parse(localStorage.getItem("patients")) || [];
@@ -68,15 +68,12 @@ const PatientForm = ({ patients, setPatients }) => {
     setPatients(filtered);
   };
 
-  const handleClearAll = () => {
-    setPatients([]);
-    localStorage.removeItem("patients");
-  };
+ 
 
   return (
     <>
       <div className="shadow rounded p-4 mb-4 bg-white from-shadow">
-        {/* <h2>{editData ? "Update Patient" : "Hospital managment"}</h2> */}
+        <h2 className="mb-4 text-center">{editData ? "Update Patient" : "Hospital Management"}</h2>
         <Form onSubmit={handleSubmit}>
           <Row>
             <Col md={6}>
@@ -161,66 +158,49 @@ const PatientForm = ({ patients, setPatients }) => {
             </Col>
           </Row>
 
-          <Button type="submit" variant="primary" className="me-2">
-            {editData ? "Update" : "Add"} Patient
-          </Button>
-          <Button variant="danger" onClick={handleClearAll}>
-            Clear All
-          </Button>
+         <Button type="submit" variant="primary" className="me-2">
+  {editData ? "Update" : "Add"} Patient
+</Button>
+         
         </Form>
       </div>
 
-      {/* Table Section */}
-      <Table striped bordered hover responsive className="mt-4">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Disease</th>
-            <th>Contact</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {patients.length === 0 ? (
-            <tr>
-              <td colSpan="7" className="text-center">
-                No records found.
-              </td>
-            </tr>
-          ) : (
-            patients.map((item, index) => (
-              <tr key={item.id}>
-                <td>{index + 1}</td>
-                <td>{item.name}</td>
-                <td>{item.age}</td>
-                <td>{item.gender}</td>
-                <td>{item.disease}</td>
-                <td>{item.contact}</td>
-                <td>
-                  <Button
-                    variant="warning"
-                    size="sm"
-                    onClick={() => handleEdit(item)}
-                    className="me-2"
-                  >
+      {/* Card List Section */}
+      <Row>
+        {patients.length === 0 ? (
+          <Col className="text-center">
+            <Card className="p-4 no-record-card">
+              <Card.Body>
+                <Card.Title className="text-danger">No Records Found</Card.Title>
+                <Card.Text>Please add patient information to see it here.</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ) : (
+          patients.map((item, index) => (
+            <Col md={4} sm={6} xs={12} key={item.id} className="mb-4">
+              <Card className="patient-card shadow-sm">
+                <Card.Body>
+                  <Card.Title className="text-primary">{item.name}</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    Age: {item.age} | Gender: {item.gender}
+                  </Card.Subtitle>
+                  <Card.Text>
+                    <strong>Disease:</strong> {item.disease} <br />
+                    <strong>Contact:</strong> {item.contact}
+                  </Card.Text>
+                  <Button variant="warning" size="sm" className="me-2" onClick={() => handleEdit(item)}>
                     Edit
                   </Button>
-                  <Button
-                    variant="danger"
-                    size="sm"
-                    onClick={() => handleDelete(item.id)}
-                  >
+                  <Button variant="danger" size="sm" onClick={() => handleDelete(item.id)}>
                     Delete
                   </Button>
-                </td>
-              </tr>
-            ))
-          )}
-        </tbody>
-      </Table>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))
+        )}
+      </Row>
     </>
   );
 };
