@@ -1,0 +1,237 @@
+*{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+}
+.body{
+        font-family: 'Jost';
+}
+header nav ul li:first-child a{
+        color: #fd7e14!important;
+        }
+    
+header nav ul li a:hover{
+       
+           color: #fd7e14!important;
+        }
+    
+.dropdown-item  {
+            color: black!important;
+         } 
+    
+.nav-icons a:hover{
+       
+            color: #fd7e14!important;
+            transition: all 0.2s ease-in-out!important;
+         }
+/* .carousel */
+.carousel-item{
+         background: url(../image/hero-bg.jpg) rgba(0,0,0,0.5);
+         background-blend-mode: overlay;
+         height: 900px;
+         width: 100%;
+         object-fit: cover;
+         object-position:bottom;
+}
+.carousel-item:nth-child(2){
+        background: url(../image/hero-bg-2.jpg) rgba(0, 0, 0,0.5);
+        height: 800px;
+        object-fit:cover;
+        object-position: bottom;
+        background-blend-mode: soft-light;
+    }
+    .carousel-item:last-child{
+        background: url(../image/hero-bg-3.jpg) rgba(0, 0, 0,0.5);
+        height: 800px;
+        object-fit:cover;
+        object-position: top;
+        background-blend-mode: soft-light;
+    }
+.carousel-item h5{
+          letter-spacing: 3px;
+          color:#F28123;
+}
+.carousel-item a{
+        
+          border:2px solid #F28123;
+}
+.carousel-item h2+ a{
+        border:2px solid #F28123;
+        background-color: #F28123;
+        transition: all 0.5s ease-in-out;
+}
+.carousel-item h2+ a:hover{
+        background-color:#051922;
+        color:#F28123;
+        border: 2px solid #051922;
+}
+
+/* support     */
+.support  i{
+        color:#F28123;
+        border:2px dotted #F28123;
+         
+         
+}
+/* product */
+.product-title h1 span{
+          color:#F28123;
+}
+
+.product-item h2 + a{
+        background-color: #fd7e14;
+}
+.product-item h2 + a:hover{
+        background-color:#051922 ;
+         color:#fd7e14;
+         border:#051922 2px solid;
+}
+/* deal */
+.deals{
+        background-color: #f5f5f5;
+    }
+.deals h2 span{
+        color: #fd7e14;
+    }
+    
+.deals ul li {
+        border: 2px solid #fd7e14;
+    }
+    
+.deals ul li span{
+        color: #fd7e14;
+    }
+.deals a{
+        background-color: #F28123;
+    }
+.deals a:hover{
+        background-color:#051922 ;
+        color:#fd7e14;
+        border:#051922 2px solid;
+}
+ 
+ .deals .price-box{
+        background-color: #fd7e14;
+        border: 6px solid #f5ab6fbf;
+        top: 30px;
+        left:70px;
+    }
+     
+/* testimonial */
+.testimonials .slider{
+        max-width:600px;      
+}
+
+.slick-slide{   
+        height:400px;  
+}
+  
+/* about */
+ .about span{
+        color: #fd7e14;
+    }
+
+.about a:hover{
+        background-color:#051922 ;
+        color:#fd7e14;
+        border:#051922 2px solid;
+}
+.about a{
+        background-color: #F28123;
+}
+
+.about{
+        margin: 100px 0 !important;
+       }
+    
+.about-img img{
+        filter: brightness(.7);
+       }
+    
+ .about-img a{
+            background-color: #fd7e14;
+            top: 50%;
+            left:50%;
+        }
+    
+.about-img a:hover {
+            background-color: #051922;
+            transition: all 0.2s ease-in-out!important;
+          
+        }
+    
+.about-img a:hover i{
+            color: #fd7e14!important;
+            transition: all 0.2s ease-in-out!important;
+           }
+    
+       
+    
+.about-img img{
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+    
+        .about-content{
+            max-width: 450px;
+            
+        } 
+/* banner */
+.banner{
+
+        background-image: url(../image/banner.jpg);
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+        
+}
+    
+.banner a:hover{
+                background-color:#051922 ;
+                color:#fd7e14;
+                border:#051922 2px solid;
+}
+.banner a{
+        background-color: #F28123;
+    }
+    .banner span{
+        color: #fd7e14;
+    }
+
+
+/* news */
+.news-title h1 span{
+        color:#F28123;
+}
+
+.news-btn a:hover{
+        background-color:#051922 ;
+        color:#fd7e14;
+        border:#051922 2px solid;
+}
+.news-btn a{
+        background-color: #F28123;
+}
+/* client */
+.multiple-items .slick-slide{   
+        height:150px;  
+}
+
+/* footer */
+.footer{
+        background-color: #051922;
+}
+
+.footer-item i {
+        color: #F28123;
+  }
+.copyright span{
+          color:#F28123;
+  }
+.line{
+        height: 2px!important;
+        width: 40px!important;
+        background-color: #F28123!important;
+  }
+ 
+
